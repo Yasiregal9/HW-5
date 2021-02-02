@@ -6,5 +6,34 @@
 </head>
 
 <body>
+	<form name="mainForm" onsubmit="return false">
+
+    <fieldset id="movieInfo">
+      <legend>Movie Information</legend>
+
+      <label for="title"> Title of Movie:</label>
+      <input name="title" id="title" placeholder="title" type="text" />
+
+      <label for="rating">Rating:</label>
+      <input name="rating" id="rating" value="Number between 1 and 5" type="text" />
+
+      </select>
+
+      <input type="submit" value="Submit" onclick="formSubmitEvent()">
+
+    </fieldset>
+
+    <fieldset id="display">
+   
+		<h2> Movies</h2></br>
+	<input type="submit" value="Click to Cycle Through Movies!" onclick="formSubmitEvent2()">
+	<div id="display1">
+		
+
+    </fieldset>
+
+  </form>
+  <script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="movie.js"></script>
 </body>
 </html>
