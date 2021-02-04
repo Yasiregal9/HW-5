@@ -17,7 +17,7 @@ var movie = function (title, rating) {
 	
     this.title = title;
     this.rating = rating;
-    this.ToString = function () { return title + "  " + rating }
+    this.ToString = function () { return title + "  " + rating + "\n" }
     this.Validate = function(){
         if(title.length > 2 && rating > 0 && rating <6){
             return true;
