@@ -6,12 +6,17 @@ function formSubmitEvent() {
     let rating = document.getElementById("rating").value;
 	
 	let mov = new movie(title,rating);
-	mov.Validate();
-	document.getElementById("display1").innerHTML = mov.ToString();
+	let good = mov.Validate();
+	
 
 	let concated = title + " " + rating + "\n";
-	arr.push(concated);
-	CustomerInfo();	
+	if(good){
+      arr.push(concated);
+      document.getElementById("display1").innerHTML = mov.ToString();
+	}else{
+		alert("Please fill in all fields. Rating must be between 1 and 5.");
+	}
+	// Why is this here? CustomerInfo();	
 	
 }
 
